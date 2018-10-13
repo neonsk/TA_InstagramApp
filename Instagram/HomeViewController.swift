@@ -188,6 +188,27 @@ class HomeViewController: UIViewController {
             
         }
     }
+    // セル内のボタンがタップされた時に呼ばれるメソッド(CommentAllDisplayプッシュ)
+    @objc func goCommentAll(_ sender: UIButton, forEvent event: UIEvent) {
+        print("DEBUG_PRINT: CommetAllボタンがタップされました。----------------")
+        let storyboard: UIStoryboard = self.storyboard!
+        let commentViewController = storyboard.instantiateViewController(withIdentifier: "Comment") as! CommentViewController
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        let postData = postArray[indexPath!.row]
+        
+        commentViewController.commentAll = postData.comments
+        commentViewController.commentCount = postData.comments.count
+        let nameText = "\(postData.name!)"
+        let captionText = "\(postData.caption!)"
+        commentViewController.caption = "\(nameText) : \(captionText)"
+        
+        self.present(commentViewController, animated: true, completion: nil)
+        
+    }
 }
 
 extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
@@ -203,6 +224,7 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
         cell.commentsPostButton.addTarget(self, action:#selector(commentsPostButton(_:forEvent:)), for: .touchUpInside)
+        cell.commentAllDisplay.addTarget(self, action:#selector(goCommentAll(_:forEvent:)), for: .touchUpInside)
         return cell
     }
 }

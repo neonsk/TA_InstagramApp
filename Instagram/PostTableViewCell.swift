@@ -50,6 +50,9 @@ class PostTableViewCell: UITableViewCell,UITextFieldDelegate {
         let captionText = "\(postData.caption!)"
         self.nameLabel.text = nameText
         self.captionLabel.text = "\(nameText) : \(captionText)"
+        captionLabel.numberOfLines = 0
+        captionLabel.sizeToFit()
+        
         let likeNumber = postData.likes.count
         likeLabel.text = "「いいね！」\(likeNumber)件"
         
@@ -60,14 +63,12 @@ class PostTableViewCell: UITableViewCell,UITextFieldDelegate {
         
         //Databaseに格納されているcommentsをcommentsAllに格納
         var commentsAll : String = ""
-        for i in 0 ..< postData.comments.count {
-            if i != 0{
-                commentsAll += ", "
-            }
-            commentsAll += "\(postData.comments[i])"
+        if postData.comments.count != 0{
+            commentsAll = "\(postData.comments[0])"
         }
-        print("commentsAll = \(commentsAll)")
+        //print("commentsAll = \(commentsAll)")
         self.commentsAllText.text = commentsAll
+        commentAllDisplay.setTitle("コメント\(postData.comments.count)件すべてを表示", for: .normal)
         
         //コメントが複数の場合はcommentAllDsiplayを表示
         if postData.comments.count < 2 {

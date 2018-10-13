@@ -67,31 +67,26 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="1Z0-0o-hIJ"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovh-af-8Au">
-                        <rect key="frame" x="224" y="551.5" width="35" height="30"/>
+                        <rect key="frame" x="224" y="554" width="35" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="35" id="GaU-x8-xTz"/>
+                            <constraint firstAttribute="height" constant="25" id="OT7-v4-dz4"/>
                         </constraints>
                         <state key="normal" title="投稿"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMH-MC-XSh">
                         <rect key="frame" x="191" y="338.5" width="68" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0Y-LC-Yju">
-                        <rect key="frame" x="26" y="399" width="233" height="120"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgO-ZL-LRd">
-                        <rect key="frame" x="26" y="524" width="233" height="20"/>
+                        <rect key="frame" x="26" y="394" width="233" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="kmP-6q-uYz"/>
                         </constraints>
@@ -103,13 +98,20 @@
                             <action selector="goCommentViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Tn3-yf-FtE"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0Y-LC-Yju">
+                        <rect key="frame" x="26" y="419" width="233" height="130"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="TYY-24-FDU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="0P3-Hg-Vuh"/>
                     <constraint firstItem="aRp-mI-Ccj" firstAttribute="centerY" secondItem="s2o-WZ-yZY" secondAttribute="centerY" id="0Sz-jM-ptx"/>
                     <constraint firstItem="5Nd-OX-PlX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="1RC-kf-sJY"/>
+                    <constraint firstItem="DgO-ZL-LRd" firstAttribute="top" secondItem="2C3-NU-B1r" secondAttribute="bottom" constant="5" id="23f-4B-NKa"/>
                     <constraint firstItem="Ovh-af-8Au" firstAttribute="leading" secondItem="5Nd-OX-PlX" secondAttribute="trailing" constant="10" id="345-wJ-Wm5"/>
-                    <constraint firstItem="d0Y-LC-Yju" firstAttribute="top" secondItem="2C3-NU-B1r" secondAttribute="bottom" constant="10" id="44N-kz-N1C"/>
+                    <constraint firstItem="Ovh-af-8Au" firstAttribute="top" secondItem="d0Y-LC-Yju" secondAttribute="bottom" constant="5" id="4df-Zf-CxQ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="5Nd-OX-PlX" secondAttribute="bottom" constant="10" id="5Kw-sl-6Rg"/>
                     <constraint firstItem="5dT-8f-ihf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="C82-v1-9bz"/>
                     <constraint firstItem="2C3-NU-B1r" firstAttribute="top" secondItem="s2o-WZ-yZY" secondAttribute="bottom" constant="10" id="Fvo-ni-yXH"/>
@@ -120,7 +122,6 @@
                     <constraint firstItem="2C3-NU-B1r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="N6F-4p-PBe"/>
                     <constraint firstAttribute="trailingMargin" secondItem="d0Y-LC-Yju" secondAttribute="trailing" constant="10" id="NVc-AR-C23"/>
                     <constraint firstItem="aRp-mI-Ccj" firstAttribute="leading" secondItem="s2o-WZ-yZY" secondAttribute="trailing" constant="10" id="OTY-BQ-778"/>
-                    <constraint firstItem="DgO-ZL-LRd" firstAttribute="top" secondItem="d0Y-LC-Yju" secondAttribute="bottom" constant="5" id="PRq-4U-3gG"/>
                     <constraint firstItem="DgO-ZL-LRd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Yxv-MN-vIE"/>
                     <constraint firstItem="TYY-24-FDU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="amZ-Qa-VhC"/>
                     <constraint firstAttribute="trailingMargin" secondItem="NMH-MC-XSh" secondAttribute="trailing" constant="10" id="hex-Zd-1hw"/>
@@ -133,8 +134,8 @@
                     <constraint firstAttribute="trailingMargin" secondItem="TYY-24-FDU" secondAttribute="trailing" constant="10" id="pbc-0p-nit"/>
                     <constraint firstItem="Ovh-af-8Au" firstAttribute="centerY" secondItem="5Nd-OX-PlX" secondAttribute="centerY" id="poj-uV-WCD"/>
                     <constraint firstItem="NMH-MC-XSh" firstAttribute="leading" secondItem="aRp-mI-Ccj" secondAttribute="trailing" constant="10" id="qTc-ZY-Lo5"/>
+                    <constraint firstItem="d0Y-LC-Yju" firstAttribute="top" secondItem="DgO-ZL-LRd" secondAttribute="bottom" constant="5" id="txj-lb-0Gq"/>
                     <constraint firstItem="5dT-8f-ihf" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="x3w-w0-Oku"/>
-                    <constraint firstItem="5Nd-OX-PlX" firstAttribute="top" secondItem="DgO-ZL-LRd" secondAttribute="bottom" constant="10" id="yMu-XY-IWI"/>
                     <constraint firstItem="5dT-8f-ihf" firstAttribute="top" secondItem="TYY-24-FDU" secondAttribute="bottom" constant="10" id="zDF-EI-ioJ"/>
                 </constraints>
             </tableViewCellContentView>
