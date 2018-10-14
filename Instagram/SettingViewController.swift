@@ -16,7 +16,6 @@ class SettingViewController: UIViewController {
 
     @IBOutlet weak var displayNameTextField: UITextField!
     
-    
     @IBAction func handleChangeButton(_ sender: Any) {
         if let displayName = displayNameTextField.text {
             
@@ -76,6 +75,12 @@ class SettingViewController: UIViewController {
         if let user = user {
             displayNameTextField.text = user.displayName
             
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let user = Auth.auth().currentUser
+        if let user = user {
+            displayNameTextField.text = user.displayName
         }
     }
 
